@@ -1,9 +1,41 @@
+using Microsoft.Maui.Layouts;
+
 namespace MauiApp1;
 
 public partial class Flex : ContentPage
 {
-	public Flex()
-	{
-		InitializeComponent();
-	}
+    public Flex()
+    {
+        InitializeComponent();
+
+        var flexLayout = new FlexLayout
+        {
+            Direction = FlexDirection.Column,
+            AlignItems = FlexAlignItems.Start
+        };
+
+        flexLayout.Children.Add(CreateItem("Nombre 1"));
+        flexLayout.Children.Add(CreateItem("Nombre 2"));
+        flexLayout.Children.Add(CreateItem("Nombre 3"));
+
+        Content = new ScrollView { Content = flexLayout };
+    }
+
+    private View CreateItem(string text)
+    {
+        var image = new Image { Source = "dotnet_bot.png", WidthRequest = 50, HeightRequest = 50 };
+        var label = new Label { Text = text, VerticalOptions = LayoutOptions.Center };
+
+        var tapGestureRecognizer = new TapGestureRecognizer
+        {
+            Command = new Command(() => Navigation.PushAsync(new Absolute()))
+        };
+        image.GestureRecognizers.Add(tapGestureRecognizer);
+
+        return new StackLayout
+        {
+            Orientation = StackOrientation.Horizontal,
+            Children = { image, label }
+        };
+    }
 }

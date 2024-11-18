@@ -23,7 +23,7 @@ public partial class Absolute : ContentPage
         {
             Children =
             {
-                new Label { Text = "Contenido largo...", FontSize = 20 }
+                new Label { Text = "Aqui Vamos de nuevo...", FontSize = 20 }
             }
         });
         absoluteLayout.Children.Add(button);

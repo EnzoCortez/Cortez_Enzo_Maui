@@ -14,9 +14,9 @@ public partial class Flex : ContentPage
             AlignItems = FlexAlignItems.Start
         };
 
-        flexLayout.Children.Add(CreateItem("Nombre 1"));
-        flexLayout.Children.Add(CreateItem("Nombre 2"));
-        flexLayout.Children.Add(CreateItem("Nombre 3"));
+        flexLayout.Children.Add(CreateItem("Enzo Cortez"));
+        flexLayout.Children.Add(CreateItem("Enzo Cortez"));
+        flexLayout.Children.Add(CreateItem("Enzo Cortez"));
 
         Content = new ScrollView { Content = flexLayout };
     }

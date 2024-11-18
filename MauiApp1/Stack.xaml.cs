@@ -11,9 +11,9 @@ public partial class Stack : ContentPage
             VerticalOptions = LayoutOptions.Center,
             Children =
             {
-                new Label { Text = "Nombre 1", FontSize = 24 },
-                new Label { Text = "Nombre 2", FontSize = 18 },
-                new Label { Text = "Nombre 3", FontSize = 14 },
+                new Label { Text = "Enzo Cortez", FontSize = 24 },
+                new Label { Text = "Enzo Cortez", FontSize = 18 },
+                new Label { Text = "Enzo Cortez", FontSize = 14 },
                 new Button
                 {
                     Text = "Ir a FlexLayout",

@@ -23,7 +23,7 @@ public partial class Flex : ContentPage
 
     private View CreateItem(string text)
     {
-        var image = new Image { Source = "dotnet_bot.png", WidthRequest = 50, HeightRequest = 50 };
+        var image = new Image { Source = "pulsar.jpg", WidthRequest = 50, HeightRequest = 50 };
         var label = new Label { Text = text, VerticalOptions = LayoutOptions.Center };
 
         var tapGestureRecognizer = new TapGestureRecognizer
